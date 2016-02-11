@@ -10,16 +10,16 @@ app.config(function($stateProvider, $urlRouterProvider){
   $stateProvider //chain states
     .state('home', {
       url: '/',
-      templateUrl: '/partials/home.html'
+      templateUrl: 'partials/home.html'
     })
     .state('list', {
       url: '/liststocks',
-      templateUrl: '/partials/list.html',
+      templateUrl: 'partials/list.html',
       controller: 'listControl'
     })
     .state('add', {
       url: '/addstock',
-      templateUrl: '/partials/add.html',
+      templateUrl: 'partials/add.html',
       controller: 'addControl'
     })
 
