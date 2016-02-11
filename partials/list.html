@@ -1,0 +1,33 @@
+<h1>list</h1>
+
+
+<div class="col-md-12">
+  <table class="table" ng-if="" >
+    <tbody>
+      <thead>
+
+        <tr>
+
+          <th ng-repeat="(key, value) in stocks[0] || {}" ng-click="sortBy(key)">
+            <!-- <p> -->
+              {{key}}
+              <span ng-show="sortType == '{{key}}'" class="fa fa-caret-down"></span>
+            <!-- </p> -->
+          </th>
+
+
+          <span class="sortorder" ng-show="predicate === 'key'" ng-class="{reverse:reverse}"></span>
+          <th><p>Delete</p></th>
+          <th><p>Edit</p></th>
+        </tr>
+
+      </thead>
+      <tr ng-repeat='stock in stocks | filter: filterText | orderBy:sortType:sortReverse' ng-class='{lightsteelblue: $even}' class='animated fadeIn'>
+        <td ng-repeat="value in stock">{{value}}</td>
+        <td><button class="btn btn-danger btn-sm" ng-click="removeContact(contact)">Delete</button></td>
+        <!-- <td><button class="btn btn-warning btn-sm" ng-click="editContact(contact)">Edit</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+
+</div>

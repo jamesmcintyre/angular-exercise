@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UI Router Intro</title>
+
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="main.js"></script>
+
+</head>
+<body ng-app="routingTest">
+
+  <div class="container">
+
+    <h1>Stock List</h1>
+
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#" ui-sref="home" >Home</a></li>
+      <li role="presentation"><a href="#" ui-sref="list">Stock List</a></li>
+      <li role="presentation"><a href="#" ui-sref="add">Add Stock</a></li>
+    </ul>
+
+
+    <!-- <button ui-sref="home" class="btn btn-default">Home</button>
+    <button ui-sref="about" class="btn btn-default">About</button> -->
+
+    <ui-view></ui-view>
+
+
+
+  </div>
+
+
+
+
+</body>
+</html>

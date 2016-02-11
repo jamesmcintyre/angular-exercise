@@ -1,0 +1,18 @@
+
+<form class="form-inline">
+
+  <input type="text" ng-model="searchstring" class="form-control searchbox"  input='filter' placeholder="search here...">
+  <button ng-click="search(searchstring)" class='btn'>Search!</button>
+
+</form>
+
+
+<table class="table">
+  <tbody>
+    <tr ng-repeat='result in results' class='animated fadeIn'>
+      <td ng-click="addStock(result)">{{result.Name}}</td>
+      <!-- <td><button class="btn btn-danger btn-sm" ng-click="removeContact(contact)">Delete</button></td> -->
+      <!-- <td><button class="btn btn-warning btn-sm" ng-click="editContact(contact)">Edit</button></td> -->
+    </tr>
+  </tbody>
+</table>
